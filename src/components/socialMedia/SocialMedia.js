@@ -8,6 +8,30 @@ export default function socialMedia() {
   }
   return (
     <div className="social-media-div">
+      {socialMediaLinks.calendly ? (
+        <a
+          href={socialMediaLinks.calendly}
+          className="icon-button calendly"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fa fa-calendar"></i>
+          <span></span>
+        </a>
+      ) : null}
+
+      {socialMediaLinks.gmail ? (
+        <a
+          href={`mailto:${socialMediaLinks.gmail}`}
+          className="icon-button google"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <i className="fas fa-envelope"></i>
+          <span></span>
+        </a>
+      ) : null}
+
       {socialMediaLinks.github ? (
         <a
           href={socialMediaLinks.github}
@@ -32,17 +56,7 @@ export default function socialMedia() {
         </a>
       ) : null}
 
-      {socialMediaLinks.gmail ? (
-        <a
-          href={`mailto:${socialMediaLinks.gmail}`}
-          className="icon-button google"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i className="fas fa-envelope"></i>
-          <span></span>
-        </a>
-      ) : null}
+      
 
       {socialMediaLinks.gitlab ? (
         <a
@@ -127,6 +141,8 @@ export default function socialMedia() {
           <span></span>
         </a>
       ) : null}
+
+      
     </div>
   );
 }
